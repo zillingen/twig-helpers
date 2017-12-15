@@ -1,6 +1,9 @@
 <?php
 
-class JsonLDTwigExtension extends Twig_Extension 
+/**
+ * Расширения для SEO: микроразметка, теги
+ */
+class SeoTwigExtension extends Twig_Extension 
 {
     public function getFunctions()
     {
@@ -13,4 +16,5 @@ class JsonLDTwigExtension extends Twig_Extension
     {
         return 'Hello from function';
     }
+
 }

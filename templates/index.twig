@@ -1,0 +1,15 @@
+{% extends 'layout.twig' %}
+
+{% block head %}
+  {{ parent() }}
+{% endblock head %}
+
+{% block content %}
+
+  <h1>{{ message }}</h1>
+  <p>text</p>
+
+  {% import 'macros/jsonld.twig' as jsonld %}
+  {% set post = {'title': 'Title epta!'} %}
+  {{ jsonld.post(post) }}
+{% endblock content %}

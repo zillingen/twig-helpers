@@ -1,0 +1,32 @@
+{# Generate Json-LD for Blog Post #}
+{% macro post(record) %}
+<script type="application/ld+json">
+{ "@context": "http://schema.org",
+ "@type": "BlogPosting",
+ "headline": "{{ record.title }}",
+ "description": "We love to do stuff to help people and stuff",
+ "image": "http://example.com/image.jpg",
+ "url": "http://www.example.com/page/1",
+ "mainEntityOfPage": "http://example.com/page/1",
+ "editor": "John Doe",
+ "genre": "SEO",
+ "keywords": "seo sales b2b",
+ "publisher": {
+  "@type": "Organization",
+    "name": "DimoZ Media",
+    "logo": {
+      "@type": "ImageObject",
+        "url": "http://site.com/logo.png"
+    }
+ },
+ "datePublished": "2015-09-20",
+ "dateCreated": "2015-09-20",
+  "dateModified": "2015-09-20",
+  "articleBody": "You can paste your entire post in here, and yes it can get really really long.",
+  "author": {
+    "@type": "Person",
+    "name": "Steve"
+  }
+ }
+</script>
+{% endmacro %}
